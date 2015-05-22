@@ -2,7 +2,7 @@ Set wShell = CreateObject("WScript.Shell")
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set objShell = CreateObject("Shell.Application")
 Set objNetwork = CreateObject("wScript.Network")
-cName = objNetwork.ComputerName
+cName = objNetwork.UserName
 
 'Prompts user for .zip
 Set oExec=wShell.Exec("mshta.exe ""about:<input type=file id=FILE><script>FILE.click();new ActiveXObject('Scripting.FileSystemObject').GetStandardStream(1).WriteLine(FILE.value);close();resizeTo(0,0);</script>""")
