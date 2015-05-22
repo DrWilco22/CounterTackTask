@@ -2,7 +2,7 @@ Set wShell = wScript.CreateObject("wScript.Shell")
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set objShell = CreateObject("Shell.Application")
 Set objNetwork = CreateObject("wScript.Network")
-cName = objNetwork.ComputerName
+cName = objNetwork.UserName
 
 Set Args = wScript.Arguments
 ZipFile = Args(0)
