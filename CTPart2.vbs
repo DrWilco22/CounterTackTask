@@ -46,7 +46,7 @@ fso.DeleteFile("C:\Users\" & cName & "\AppData\Roaming\Microsoft\Windows\Start M
 
 'Runs 5 times
 If Args(1) < 5 Then
-	Set b = fso.CreateTextFile("C:\Users\WilcoVM\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\tempfile.vbs")
+	Set b = fso.CreateTextFile("C:\Users\" & cName & "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\tempfile.vbs")
 	b.WriteLine("Set wShell = CreateObject(""WScript.Shell"")")
 	b.WriteLine("wShell.Run ""cscript C:\Users\WilcoVM\Documents\CTPart2.vbs " & ZipFile & " " & Args(1) + 1 & " " & Timer() & """")
 	b.Close
