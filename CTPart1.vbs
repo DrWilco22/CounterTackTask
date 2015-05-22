@@ -20,7 +20,7 @@ a.Close
 'Creates temporary file to run after reboot
 Set b = fso.CreateTextFile("C:\Users\" & cName & "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\tempfile.vbs")
 b.WriteLine("Set wShell = CreateObject(""WScript.Shell"")")
-b.WriteLine("wShell.Run ""cscript C:\Users\WilcoVM\Documents\CTPart2.vbs " & ZipFile & " 1 " & Timer() & """")
+b.WriteLine("wShell.Run ""cscript " & Parent & "\CTPart2.vbs " & ZipFile & " 1 " & Timer() & """")
 b.Close
 
 'Reboots
